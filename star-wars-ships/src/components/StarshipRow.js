@@ -1,49 +1,26 @@
-import React from 'react';
+import React from "react";
 
 class StarshipRow extends React.Component {
   render() {
-    return <tr>
-    <td>
-      {this.props.ship.name}
-    </td>
-    <td>
-      {this.props.ship.model}
-    </td>
-    <td>
-      {this.props.ship.manufacturer}
-    </td> 
-    <td>
-      {this.props.ship.cost_in_credits}
-    </td> 
-    <td>
-      {this.props.ship.length}
-    </td> 
-    <td>
-      {this.props.ship.max_atmosphering_speed}
-    </td> 
-    <td>
-      {this.props.ship.crew}
-    </td> 
-    <td>
-      {this.props.ship.passengers}
-    </td> 
-    <td>
-      {this.props.ship.cargo_capacity}
-    </td> 
-    <td>
-      {this.props.ship.consumables}
-    </td> 
-    <td>
-      {this.props.ship.hyperdrive_rating}
-    </td> 
-    <td>
-      {this.props.ship.MGLT}
-    </td> 
-    <td>
-      {this.props.ship.starship_class}
-    </td> 
-  </tr>
+    let shipArray = this.props.ship;
+    return (
+      <tr>
+        <td>{shipArray.name}</td>
+        <td>{shipArray.model}</td>
+        <td>{shipArray.manufacturer}</td>
+        <td>{shipArray.cost_in_credits}</td>
+        <td>{shipArray.length}</td>
+        <td>{shipArray.max_atmosphering_speed}</td>
+        <td>{shipArray.crew}</td>
+        <td>{shipArray.passengers}</td>
+        <td>{shipArray.cargo_capacity}</td>
+        <td>{shipArray.consumables}</td>
+        <td>{shipArray.hyperdrive_rating}</td>
+        <td>{shipArray.MGLT}</td>
+        <td>{shipArray.starship_class}</td>
+      </tr>
+    );
   }
 }
 
-export default StarshipRow
+export default StarshipRow;

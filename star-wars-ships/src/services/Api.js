@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
 export default () => {
   return axios.create({
-    baseURL: 'https://swapi.co/'
-  })
-}
+    baseURL: "https://swapi.co/"
+  });
+};
