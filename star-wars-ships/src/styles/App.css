@@ -6,9 +6,13 @@
   width: 100%;
 }
 .container {
-  padding: 50px;
+  padding: 20px;
   width: 100%;
 }
 td {
   word-wrap: break-word;
+}
+.table-headers {
+  font-weight: bold;
+  padding-bottom: 20px;
 }
