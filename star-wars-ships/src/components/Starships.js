@@ -65,9 +65,22 @@ class Starships extends React.Component {
         );
         shipColumnNamesFixed.push(column);
       });
+      //Normalize data
+      shipArray.forEach(element => {
+        for (var property in element.props.ship) {
+          if (element.props.ship.hasOwnProperty(property)) {
+            if (
+              element.props.ship[property] === "n/a" ||
+              element.props.ship[property] === "unknown"
+            ) {
+              element.props.ship[property] = "0";
+            }
+          }
+        }
+      });
       // Render state
-      this.setState({ StarshipsArray: shipArray });
-      this.setState({ StarshipColumnNames: shipColumnNamesFixed });
+      await this.setState({ StarshipsArray: shipArray });
+      await this.setState({ StarshipColumnNames: shipColumnNamesFixed });
     } catch (error) {
       console.log(error);
     }
